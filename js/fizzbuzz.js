@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	var keepGoing = true;
-	while(keepGoing){
+
 		var inputString = prompt('Enter a number between 1 and 300:');
 		var inputNumber = parseInt(inputString);
 
@@ -19,8 +18,8 @@ $(document).ready(function(){
 			thatIsNotaNumber();
 			keepGoing = false;
 		}
-	} /* ends the keep going loop*/
-});
+
+
 
 function fizzBuzz (highLimit){
 	for(var counter = 1; counter <= highLimit; counter++){
@@ -60,5 +59,5 @@ function thatIsNotaNumber(){
 	keepGoing=false;
 	return;
 	}
-
+});
 
