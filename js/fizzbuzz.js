@@ -4,7 +4,7 @@ $(document).ready(function(){
 		var inputNumber = parseInt(inputString);
 		var n = inputString.indexOf(".");
 		if (n==-1) {
-			if(!isNaN(inputNumber) && inputNumber!=''){
+			if(!isNaN(inputNumber) && inputNumber!==''){
 					if(inputNumber > 0 && inputNumber < 301){
 						console.log('Good number!,' + 'inputNumber=' + inputNumber);
 						fizzBuzz(inputNumber);
