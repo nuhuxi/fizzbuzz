@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+//this is a comment
 		var inputString = prompt('Enter a number between 1 and 300:');
 		var inputNumber = parseInt(inputString);
 		var n = inputString.indexOf(".");
