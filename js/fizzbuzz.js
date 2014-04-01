@@ -2,22 +2,24 @@ $(document).ready(function(){
 
 		var inputString = prompt('Enter a number between 1 and 300:');
 		var inputNumber = parseInt(inputString);
-
-		if(!isNaN(inputNumber) && inputNumber!=''){
-			if(inputNumber > 0 && inputNumber < 301){
-				console.log('Good number!,' + 'inputNumber=' + inputNumber);
-				fizzBuzz(inputNumber);
-				keepGoing = false;
-
-			} else{
-				alert("That number is not between 1 and 300.");
-				keepGoing = false;
+		var n = inputString.indexOf(".");
+		if (n==-1) {
+			if(!isNaN(inputNumber) && inputNumber!=''){
+					if(inputNumber > 0 && inputNumber < 301){
+						console.log('Good number!,' + 'inputNumber=' + inputNumber);
+						fizzBuzz(inputNumber);
+					} else{
+						alert("That number is not between 1 and 300.");
+					}
 			}
+			else{
+				console.log(isNaN(inputNumber));
+				thatIsNotaNumber();
+			}
+		}else{
+			alert("It wont work for decimals!");
 		}
-		else{
-			thatIsNotaNumber();
-			keepGoing = false;
-		}
+
 
 
 
@@ -56,7 +58,6 @@ function fizzBuzz (highLimit){
 
 function thatIsNotaNumber(){
 	alert('That is not a number');
-	keepGoing=false;
 	return;
 	}
 });
